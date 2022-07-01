@@ -11,9 +11,7 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    self.artists.map do |artist|
-      artist.name
-    end
+    self.artists.map { |artist| artist.name }
 
     # Or, use #pluck
     # self.artists.pluck(:name)
